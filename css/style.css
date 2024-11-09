@@ -1,0 +1,180 @@
+body {
+  background-image: url("../images/ocean.png");
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 5px solid pink;
+  border-style: inset;
+  background-size: cover;
+  overflow-x: hidden;
+  background-attachment: fixed;
+}
+
+#header {
+  border-style: outset;
+  text-align: center;
+}
+
+#header ul {
+  list-style-type: none;
+  font-size: 2em;
+  text-align: center;
+  display: inline;
+  position: relative;
+  padding: 0;
+}
+
+#header ul li {
+  display: inline;
+  position: relative;
+  margin: 5px;
+}
+
+#header ul li a {
+  color: orange;
+  text-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+}
+
+#header ul li a:hover{
+  color: yellow;
+  text-shadow: 0.5em 0.5em 0.5em rgba(127, 127, 0, 0.25);
+}
+
+p, h2, h3, strong, ul, li {
+  color: lightblue;
+  text-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+  font-family: "Times New Roman", "Arial";
+}
+
+h1 {
+  font-family: "Audiowide", "Courier New";
+  color: white;
+  text-align: center;
+  text-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+}
+
+h2, h3 {
+  color: pink;
+  text-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+}
+
+h1:hover {
+  color: lightgray;
+}
+
+p:hover, ul:hover, li:hover, strong:hover {
+  color: skyblue;
+}
+
+h2:hover, h3:hover {
+  color: fuchsia;
+}
+
+div {
+  background-image: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0));
+  display: flow-root;
+}
+
+section {
+  opacity: 1;
+  border: 5px solid purple;
+  border-style: inset;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flow-root;
+}
+
+img, video {
+  margin-left: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+/*
+main page css
+*/
+
+#words section{
+  background-color: rgba(255, 127, 127, 0.5);
+}
+
+#thumbsup-pic {
+  border: 20px;
+  border-style: outset;
+  float: right;
+  padding: 10px;
+  margin: 10px;
+}
+
+#main-content {
+  background-image: url("../images/ocean.png");
+  background-size: cover;
+}
+
+/*
+resume page css
+*/
+
+#resume-nav {
+  background-color: rgba(255, 255, 0, 0.5);
+}
+
+#resume-nav ul {
+  text-align: center;
+  list-style-type: none;
+  display: block;
+  position: relative;
+  padding: 0;
+}
+
+#resume-nav ul li {
+  display: inline;
+  position: relative;
+  margin: 5px;
+}
+
+#resume-nav ul li a{
+  font-size: 1.5em;
+  color: green;
+  text-decoration: none;
+}
+
+#resume-nav ul li a:hover {
+  font-size: 1.5em;
+  color: lime;
+  text-shadow: 0.5em 0.5em 0.5em rgba(127, 190, 127, 0.25);
+}
+
+#leadership {
+  background-color: rgba(127, 0, 0, 0.5);
+}
+
+/*
+stuff page css
+*/
+
+#apple-pic img, #hand-pic img {
+  border: 20px;
+  border-color: gray;
+  border-style: outset;
+  float: right;
+  margin: 10px;
+}
+
+#the-video {
+  float: right;
+}
+
+#the-video p {
+  font-family: "Audiowide", "Courier New";
+  float: left;
+  margin: 10px;
+}
+
+#the-video:hover {
+  background-color: rgba(1,1,1,0);
+}
+
+#hand-pic {
+  display: block;
+}
