@@ -18,19 +18,28 @@ function mobileQuery(){
 function getColourLoversPalette(){
   //uses ColourLovers API
   const colorImage = document.createElement("image")
-  fetch("http://www.colourlovers.com/api/colors/random").then(response{
+  fetch("https://www.colourlovers.com/api/colors/random").then(response{
     if(!response.ok){
+      throw new Error(`HTTP error: ${response.status}`);
     }
-    return response.json;
-  }).then
+    return response.text();
+  })
+  .then(response.json){
+  }
 }
 
 function getCatFact(){
   //uses Daily Cat Facts API
-  fetch("https://alexwohlbruck.github.io/cat-facts/"){
-  }
-  let catFact = GET /facts/random?animal_type=cat&amount=1
+  fetch("https://alexwohlbruck.github.io/cat-facts/facts/random?animal_type=cat&amount=1").then(response{
+    if(!response.ok){
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.text();
+  })
+  .then(response.json){
+  let catFact
   const factPlace = document.getElementById("catFact");
   factPlace.innerHTML = catFact.text;
   GET /facts/random?animal_type=cat&amount=1;
+  }
 }
