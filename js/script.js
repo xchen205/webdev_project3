@@ -4,10 +4,10 @@ function init(){
   const catButton = document.querySelector("button");
   catButton.onclick = getCatFact();
   catButton.onclick = window.alert("yes this button works, now how to link it to the api?");
+  getCatFact();
 }
 
 window.addEventListener("load", init);
-window.addEventListener("load", getCatFact);
 
 function mobileQuery(){
   if(min-width<=600){
@@ -27,7 +27,7 @@ function getColourLoversPalette(){
 
 function getCatFact(){
   //uses Daily Cat Facts API
-  fetch(){
+  fetch("https://alexwohlbruck.github.io/cat-facts/"){
   }
   let catFact = GET /facts/random?animal_type=cat&amount=1
   const factPlace = document.getElementById("catFact");
