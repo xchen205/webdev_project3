@@ -20,9 +20,11 @@ function getColourLoversPalette(){
 }
 
 function getCatFact(){
-  //uses ColourLovers API
+  //uses Daily Cat Facts API
+  fetch(){
+  }
   let catFact = GET /facts/random?animal_type=cat&amount=1
-  const factPlace = document.querySelector("p");
+  const factPlace = document.getElementById("catFact");
   factPlace.innerHTML = catFact.text;
   GET /facts/random?animal_type=cat&amount=1;
 }
