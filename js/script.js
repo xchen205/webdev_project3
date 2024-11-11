@@ -26,6 +26,9 @@ function getColourLoversPalette(){
   })
   .then(response.json){
   }
+  .catch((error) => {
+  //poemDisplay.textContent = `Could not fetch verse: ${error}`;
+  })
 }
 
 function getCatFact(){
@@ -42,4 +45,7 @@ function getCatFact(){
   factPlace.innerHTML = catFact.text;
   GET /facts/random?animal_type=cat&amount=1;
   }
+  .catch((error) => {
+    factPlace.innerHTML = `No fact for you: ${error}`;
+  })
 }
