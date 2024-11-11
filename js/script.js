@@ -1,9 +1,11 @@
-window.addEventListener("load", getCatFact());
+window.addEventListener("load", getCatFact);
 const bodyFit = Window.innerWidth;
+const catButton = document.querySelector("button");
+catButton.onclick = getCatFact();
 
 function mobileQuery(){
   if(min-width<=600){
-    body.size=50%;
+    body.style.size=50%;
   }
 }
 
