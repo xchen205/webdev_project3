@@ -1,8 +1,13 @@
+function init(){
+  const bodyFit = window.innerWidth;
+  //const catButton = document.querySelector("button");
+  const catButton = document.querySelector("button");
+  catButton.onclick = getCatFact();
+  catButton.onclick = window.alert("yes this button works, now how to link it to the api?");
+}
+
+window.addEventListener("load", init);
 window.addEventListener("load", getCatFact);
-const bodyFit = window.innerWidth;
-const catButton = document.querySelector("button");
-catButton.onclick = getCatFact();
-catButton.onclick = window.alert("yes this button works, now how to link it to the api?");
 
 function mobileQuery(){
   if(min-width<=600){
