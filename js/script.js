@@ -1,5 +1,5 @@
-const bodyFit = document.querySelector("body");
-let catFact = {}
+window.addEventListener("load", getCatFact());
+const bodyFit = Window.innerWidth;
 
 function mobileQuery(){
   if(min-width<=600){
@@ -19,5 +19,8 @@ function getColourLoversPalette(){
 
 function getCatFact(){
   //uses ColourLovers API
+  let catFact = GET /facts/random?animal_type=cat&amount=1
+  const factPlace = document.querySelector("p");
+  factPlace.innerHTML = catFact.text;
   GET /facts/random?animal_type=cat&amount=1;
 }
