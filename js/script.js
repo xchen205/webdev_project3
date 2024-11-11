@@ -1,7 +1,8 @@
 window.addEventListener("load", getCatFact);
-const bodyFit = Window.innerWidth;
+const bodyFit = window.innerWidth;
 const catButton = document.querySelector("button");
 catButton.onclick = getCatFact();
+catButton.onclick = window.alert("yes this button works, now how to link it to the api?");
 
 function mobileQuery(){
   if(min-width<=600){
