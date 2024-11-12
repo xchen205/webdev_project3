@@ -1,9 +1,8 @@
 function init(){
-  const bodyFit = window.innerWidth;
-  //const catButton = document.getElementById("catButton");
-  const catButton = document.getElementById("catButton");
+  const bodyFit = Window.innerWidth;
+  const catButton = document.getElementById("cat-button");
   catButton.onclick = getCatFact();
-  catButton.onclick = window.alert("yes this button works, now how to link it to the api?");
+  catButton.onclick = Window.alert("yes this button works, now how to link it to the api?");
   getCatFact();
 }
 
@@ -34,12 +33,12 @@ function getCatFact(){
     return response.text();
   })
   .then(response.json){
-  let catFact
-  const factPlace = document.getElementById("catFact");
-  factPlace.innerHTML = catFact.text;
-  GET /facts/random?animal_type=cat&amount=1;
+    let catFact
+    const factPlace = document.getElementById("catFact");
+    document.getElementById("cat-fact").innerHTML = catFact.text;
+    GET /facts/random?animal_type=cat&amount=1;
   }
   .catch((error) => {
-    factPlace.innerHTML = `No fact for you: ${error}`;
+    document.getElementById("cat-fact").innerHTML = `No fact for you: ${error}`;
   })
 }
