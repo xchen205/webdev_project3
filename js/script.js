@@ -30,12 +30,11 @@ function getCatFact(){
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return response.text;
+    return response.json()
   })
-  .then((text) => {
+  .then((data) => {
     let catFact
-    const factPlace = document.getElementById("catFact");
-    document.getElementById("cat-text").innerHTML = catFact.text;
+    document.getElementById("cat-text").innerHTML = data.text;
   })
   .catch((error) => {
     document.getElementById("cat-text").innerHTML = `No fact for you: ${error}`;
