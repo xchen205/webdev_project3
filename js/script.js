@@ -9,12 +9,6 @@ function init(){
 
 window.addEventListener("load", init);
 
-function mobileQuery(){
-  if(min-width<=600){
-    body.style.size=50%;
-  }
-}
-
 function getColourLoversPalette(){
   //uses ColourLovers API
   const colorImage = document.createElement("image")
