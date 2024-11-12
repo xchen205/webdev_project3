@@ -14,7 +14,7 @@ function getColourLoversPalette(){
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return response.imageUrl();
+    return response.imageUrl;
   })
   .then((imageUrl) => {
     document.createElement("img").setAttribute("src", imageUrl);
@@ -30,7 +30,7 @@ function getCatFact(){
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return response.text();
+    return response.text;
   })
   .then((text) => {
     let catFact
