@@ -44,6 +44,9 @@ p, h2, h3, strong, ul, li {
   color: lightblue;
   text-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.25);
   font-family: "Times New Roman", "Arial";
+}
+
+p, h2, h3, ul {
   font-size: 200%;
 }
 
@@ -98,7 +101,7 @@ img, video {
     margin-left: 5%;
     margin-right: 5%;
   }
-  p, h2, h3, strong, ul, li {
+  p, h2, h3, ul {
     font-size: 100%;
   }
   h1 {
