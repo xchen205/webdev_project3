@@ -40,7 +40,7 @@ body {
   text-shadow: 0.5em 0.5em 0.5em rgba(127, 127, 0, 0.25);
 }
 
-p, h2, h3, strong, ul, li {
+p, strong, ul, li {
   color: lightblue;
   text-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.25);
   font-family: "Times New Roman", "Arial";
