@@ -139,6 +139,7 @@ main page css
 @media (min-width: 600px){
   #thumbsup-pic {
     border: 20px;
+    border-style: outset;
     padding: 10px;
     margin: 10px;
     width: 40%;
