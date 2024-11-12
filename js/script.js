@@ -10,14 +10,14 @@ window.addEventListener("load", init);
 
 function getColourLoversPalette(){
   //uses ColourLovers API
-  const colorImage = document.createElement("image")
   fetch("https://www.colourlovers.com/api/colors/random").then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return response.text();
+    return response.imageUrl();
   })
-  .then((text) => {
+  .then((imageUrl) => {
+    document.createElement("image");
   })
   .catch((error) => {
   //poemDisplay.textContent = `Could not fetch verse: ${error}`;
