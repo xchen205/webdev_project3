@@ -96,7 +96,7 @@ img, video {
   margin-bottom: 5%;
 }
 
-@media (min-width >= 20em){
+@media (min-width >= 800px){
   body {
     margin-left: 5%;
     margin-right: 5%;
@@ -134,7 +134,7 @@ main page css
   background-size: cover;
 }
 
-@media (min-width >= 20em){
+@media (min-width >= 800px){
   #thumbsup-pic {
     border: 20px;
     padding: 10px;
