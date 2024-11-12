@@ -36,7 +36,7 @@ function getCatFact(){
   })
   .then((text) => {
     let catFact
-    document.getElementById("cat-text").innerHTML = data.text;
+    document.getElementById("cat-text").innerHTML = text;
   })
   .catch((error) => {
     document.getElementById("cat-text").innerHTML = `No fact for you: ${error}`;
