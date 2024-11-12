@@ -17,10 +17,10 @@ function getColourLoversPalette(){
     return response.imageUrl();
   })
   .then((imageUrl) => {
-    document.createElement("image").setAttribute("src", imageUrl);
+    document.createElement("img").setAttribute("src", imageUrl);
   })
   .catch((error) => {
-    document.createElement("p").innerHTML  = `Image getter broke: ${error}`
+    document.createElement("p").innerHTML  = `Image getter broke: ${error}`;
   })
 }
 
