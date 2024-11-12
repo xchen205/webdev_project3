@@ -3,6 +3,7 @@ function init(){
   const catButton = document.getElementById("cat-button");
   catButton.addEventListener("onclick", getCatFact);
   getCatFact();
+  var test = document.createElement("button");
 }
 
 window.addEventListener("load", init);
