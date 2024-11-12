@@ -30,7 +30,7 @@ function getCatFact(){
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return response.json()
+    return response.json();
   })
   .then((data) => {
     let catFact
