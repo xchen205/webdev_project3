@@ -20,7 +20,7 @@ function getColourLoversPalette(){
     document.getElementById("color-pic").createElement("img").setAttribute("src", imageUrl);
   })
   .catch((error) => {
-    document.getElementById("color-pic").createElement("p").innerHTML  = `Image getter broke: ${error}`;
+    document.createElement("p").innerHTML  = `Image getter broke: ${error}`;
   })
 }
 
