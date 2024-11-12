@@ -14,7 +14,7 @@ function getColourLoversPalette(){
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return response.imageUrl;
+    return response.getElementByTagName("imageUrl").innerHTML;
   })
   .then((imageUrl) => {
     document.createElement("img").setAttribute("src", imageUrl);
