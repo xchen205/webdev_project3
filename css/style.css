@@ -126,7 +126,8 @@ main page css
   float: right;
   padding: 0px;
   margin: 5px;
-  size: 50%;
+  width: 50%;
+  height: 50%;
 }
 
 #main-content {
@@ -139,7 +140,8 @@ main page css
     border: 20px;
     padding: 10px;
     margin: 10px;
-    size: 100%;
+    width: 100%;
+    height: 100%;
   }
   
   #main-content {

@@ -1,7 +1,7 @@
 function init(){
   const bodyFit = window.innerWidth;
-  //const catButton = document.querySelector("button");
-  const catButton = document.querySelector("button");
+  //const catButton = document.getElementById("catButton");
+  const catButton = document.getElementById("catButton");
   catButton.onclick = getCatFact();
   catButton.onclick = window.alert("yes this button works, now how to link it to the api?");
   getCatFact();
