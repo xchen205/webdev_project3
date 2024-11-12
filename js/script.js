@@ -36,7 +36,6 @@ function getCatFact(){
     let catFact
     const factPlace = document.getElementById("catFact");
     document.getElementById("cat-fact").innerHTML = catFact.text;
-    GET /facts/random?animal_type=cat&amount=1;
   })
   .catch((error) => {
     document.getElementById("cat-fact").innerHTML = `No fact for you: ${error}`;
