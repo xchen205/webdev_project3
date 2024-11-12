@@ -1,7 +1,9 @@
 function init(){
   const bodyFit = window.innerWidth;
   const catButton = document.getElementById("cat-button");
+  const catClearButton = document.getElementById("cat-clear-button");
   catButton.addEventListener("onclick", getCatFact);
+  catClearButton.addEventListener("onclick", removeCatFact);
   getColourLoversPalette();
   getCatFact();
 }
@@ -39,4 +41,8 @@ function getCatFact(){
   .catch((error) => {
     document.getElementById("cat-text").innerHTML = `No fact for you: ${error}`;
   })
+}
+
+function removeCatFact(){
+  document.getElementById("cat-text").innerHTML = ``;
 }
