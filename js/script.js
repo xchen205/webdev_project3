@@ -10,7 +10,7 @@ window.addEventListener("load", init);
 
 function getColourLoversPalette(){
   //uses ColourLovers API
-  fetch("https://www.colourlovers.com/api/colors/random").then((response) => {
+  fetch("https://www.colourlovers.com/api/colors/random",{mode : 'no-cors'}).then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
@@ -26,7 +26,7 @@ function getColourLoversPalette(){
 
 function getCatFact(){
   //uses Daily Cat Facts API
-  fetch("https://alexwohlbruck.github.io/cat-facts/facts/random?animal_type=cat&amount=1").then((response) => {
+  fetch("https://alexwohlbruck.github.io/cat-facts/api/facts/random?animal_type=cat&amount=1").then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
