@@ -1,7 +1,7 @@
 body {
   background-image: url("../images/ocean.png");
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
   border: 5px solid pink;
   border-style: inset;
   background-size: cover;
@@ -44,6 +44,7 @@ p, h2, h3, strong, ul, li {
   color: lightblue;
   text-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.25);
   font-family: "Times New Roman", "Arial";
+  font-size: 200%;
 }
 
 h1 {
@@ -51,11 +52,13 @@ h1 {
   color: white;
   text-align: center;
   text-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+  font-size: 200%;
 }
 
 h2, h3 {
   color: pink;
   text-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.25);
+  font-size: 200%;
 }
 
 h1:hover {
@@ -90,6 +93,22 @@ img, video {
   margin-bottom: 5%;
 }
 
+@media (min-width >= 30em){
+  body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  p, h2, h3, strong, ul, li {
+    font-size: 100%;
+  }
+  h1 {
+    font-size: 100%;
+  }
+  h2, h3 {
+    font-size: 100%;
+  }
+}
+
 /*
 main page css
 */
@@ -99,16 +118,30 @@ main page css
 }
 
 #thumbsup-pic {
-  border: 20px;
+  border: 10px;
   border-style: outset;
   float: right;
-  padding: 10px;
-  margin: 10px;
+  padding: 0px;
+  margin: 5px;
+  size: 50%;
 }
 
 #main-content {
   background-image: url("../images/ocean.png");
   background-size: cover;
+}
+
+@media (min-width >= 30em){
+  #thumbsup-pic {
+    border: 20px;
+    padding: 10px;
+    margin: 10px;
+    size: 100%;
+  }
+  
+  #main-content {
+     background-color: rgba(0, 0, 0, 0.25);
+  }
 }
 
 /*
