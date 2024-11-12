@@ -26,13 +26,13 @@ function getColourLoversPalette(){
 
 function getCatFact(){
   //uses Daily Cat Facts API
-  fetch("https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1").then((response) => {
+  fetch("https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1", {body: JSON.stringify}).then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return response.json();
+    return response.text;
   })
-  .then((data) => {
+  .then((text) => {
     let catFact
     document.getElementById("cat-text").innerHTML = data.text;
   })
