@@ -17,10 +17,10 @@ function getColourLoversPalette(){
     return response.imageUrl();
   })
   .then((imageUrl) => {
-    document.createElement("image");
+    document.createElement("image").setAttribute("src", imageUrl);
   })
   .catch((error) => {
-  //poemDisplay.textContent = `Could not fetch verse: ${error}`;
+    document.createElement("p").innerHTML  = `Image getter broke: ${error}`
   })
 }
 
