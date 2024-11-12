@@ -2,8 +2,8 @@ function init(){
   const bodyFit = window.innerWidth;
   const catButton = document.getElementById("cat-button");
   catButton.addEventListener("onclick", getCatFact);
+  getColourLoversPalette();
   getCatFact();
-  window.alert("the init function works");
 }
 
 window.addEventListener("load", init);
