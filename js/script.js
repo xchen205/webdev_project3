@@ -28,6 +28,7 @@ function getColourLoversPalette(){
 
 function getCatFact(){
   //uses Daily Cat Facts API
+  let catFact = document.getElementById("cat-text").innerHTML;
   fetch("https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1", {mode : 'no-cors'}).then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
@@ -35,11 +36,10 @@ function getCatFact(){
     return response.text;
   })
   .then((text) => {
-    let catFact
-    document.getElementById("cat-text").innerHTML = text;
+    catFact = text;
   })
   .catch((error) => {
-    document.getElementById("cat-text").innerHTML = `No fact for you: ${error}`;
+    catFact = `No fact for you: ${error}`;
   })
 }
 
