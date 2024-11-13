@@ -19,7 +19,7 @@ function getColourLoversPalette(){
     return response.getElementByTagName("imageUrl").innerHTML;
   })
   .then((imageUrl) => {
-    document.getElementById("color-pic").createElement("img").setAttribute("src", imageUrl);
+    document.getElementById("color-pic").setAttribute("src", imageUrl);
   })
   .catch((error) => {
     document.createElement("p").innerHTML  = `Image getter broke: ${error}`;
