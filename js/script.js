@@ -41,7 +41,7 @@ function getColourLoversColor(){
     var xmlDoc = xmlParser.parseFromString(text,"text/xml");
     document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl");
   })
-  .catch((error.replace("Error: ","")) => {
+  .catch((error.slice("Error: ")) => {
     fetch(`https://http.cat/${error}`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
@@ -73,7 +73,7 @@ function getColourLoversPalette(){
     var xmlDoc = xmlParser.parseFromString(text,"text/xml");
     document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl");
   })
-  .catch((error.replace("Error: ","")) => {
+  .catch((error.slice("Error: ")) => {
     fetch(`https://http.cat/${error}`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
       throw new Error(`${response.status}`);
