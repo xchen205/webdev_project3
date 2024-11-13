@@ -1,21 +1,23 @@
 function init(){
   const bodyFit = window.innerWidth;
   //cat variables
-  const catButton = document.getElementById("cat-button");
-  const catClearButton = document.getElementById("cat-clear-button");
-  //color buttons
-  const colorButton = document.getElementById("color-button");
-  const paletteButton = document.getElementById("palette-button");
-  const colorClearButton = document.getElementById("color-clear-button");
-  //cat buttons
-  catButton.addEventListener("onclick", getCatFact);
-  catClearButton.addEventListener("onclick", removeCatFact);
-  //color buttons
-  colorButton.addEventListener("onclick", getColourLoversColor);
-  paletteButton.addEventListener("onclick", getColourLoversPalette);
-  colorClearButton.addEventListener("onclick", removeColourLoversPalette);
-  getColourLoversPalette();
-  getCatFact();
+  if(window.location.pathname = "/apiuserpage.html"){
+    const catButton = document.getElementById("cat-button");
+    const catClearButton = document.getElementById("cat-clear-button");
+    //color buttons
+    const colorButton = document.getElementById("color-button");
+    const paletteButton = document.getElementById("palette-button");
+    const colorClearButton = document.getElementById("color-clear-button");
+    //cat buttons
+    catButton.addEventListener("onclick", getCatFact);
+    catClearButton.addEventListener("onclick", removeCatFact);
+    //color buttons
+    colorButton.addEventListener("onclick", getColourLoversColor);
+    paletteButton.addEventListener("onclick", getColourLoversPalette);
+    colorClearButton.addEventListener("onclick", removeColourLoversPalette);
+    getColourLoversPalette();
+    getCatFact();
+  }
 }
 
 window.addEventListener("load", init);
