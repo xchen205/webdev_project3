@@ -2,8 +2,12 @@ function init(){
   const bodyFit = window.innerWidth;
   const catButton = document.getElementById("cat-button");
   const catClearButton = document.getElementById("cat-clear-button");
+  const colorButton = document.getElementById("color-button");
+  const colorClearButton = document.getElementById("color-clear-button");
   catButton.addEventListener("onclick", getCatFact);
   catClearButton.addEventListener("onclick", removeCatFact);
+  colorButton.addEventListener("onclick", getColourLoversPalette);
+  colorClearButton.addEventListener("onclick", removeColourLoversPalette);
   getColourLoversPalette();
   getCatFact();
 }
@@ -45,4 +49,8 @@ function getCatFact(){
 
 function removeCatFact(){
   document.getElementById("cat-text").innerHTML = "";
+}
+
+function removeColourLoversPalette(){
+  document.getElementById("color-pic").setAttribute("src", "");
 }
