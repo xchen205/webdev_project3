@@ -83,7 +83,7 @@ function getColourLoversPalette(){
   })
 }
 
-//returns http error 503
+//http error 503
 function getCatFact(){
   //uses Daily Cat Facts API
   fetch("https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1", {mode : 'no-cors'}).then((response) => {
@@ -100,6 +100,7 @@ function getCatFact(){
   })
 }
 
+//http error 403
 function getDogFact(){
   //uses Dog Facts API
   fetch("https://dog-api.kinduff.com/api/facts?number=1", {mode : 'no-cors'}).then((response) => {
