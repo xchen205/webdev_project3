@@ -59,7 +59,7 @@ function getColourLoversPalette(){
   //uses ColourLovers API
   fetch("https://www.colourlovers.com/api/palette/random", {mode : 'no-cors'}).then((response) => {
     if(!response.ok){
-      throw new Error(`HTTP error: ${response.status}`);
+      throw new Error(`${response.status}`);
     }
     return response.text();
   })
@@ -71,7 +71,7 @@ function getColourLoversPalette(){
   .catch((error) => {
     fetch(`https://http.cat/${error}`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
-      throw new Error(`HTTP error: ${response.status}`);
+      throw new Error(`${response.status}`);
     }
     return response.text(); 
     })
