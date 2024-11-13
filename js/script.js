@@ -44,6 +44,8 @@ function getColourLoversColor(){
   })
 }
 
+
+//returns xml, no idea how to handle that
 function getColourLoversPalette(){
   //uses ColourLovers API
   fetch("https://www.colourlovers.com/api/palettes/random", {mode : 'no-cors'}).then((response) => {
@@ -61,6 +63,7 @@ function getColourLoversPalette(){
   })
 }
 
+//returns http error 503
 function getCatFact(){
   //uses Daily Cat Facts API
   fetch("https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1", {mode : 'no-cors'}).then((response) => {
@@ -78,8 +81,8 @@ function getCatFact(){
 }
 
 function getDogFact(){
-  //uses Daily Cat Facts API
-  fetch("http://dog-api.kinduff.com/api/facts?number=1", {mode : 'no-cors'}).then((response) => {
+  //uses Dog Facts API
+  fetch("https://dog-api.kinduff.com/api/facts?number=1", {mode : 'no-cors'}).then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
