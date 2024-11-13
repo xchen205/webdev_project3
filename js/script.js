@@ -1,7 +1,7 @@
 function init(){
   const bodyFit = window.innerWidth;
   //cat variables
-  if(window.location.pathname = "/apiuserpage.html"){
+  if(window.location.pathname = "/webdev_project3/apiuserpage.html"){
     const catButton = document.getElementById("cat-button");
     const catClearButton = document.getElementById("cat-clear-button");
     //color buttons
