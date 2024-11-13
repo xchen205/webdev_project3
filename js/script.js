@@ -33,7 +33,7 @@ function getColourLoversColor(){
   })
   .then((response) => {
     var xmlParser = new DOMParser();
-    var xmlDoc = parser.parseFromString(response,"text/xml");
+    var xmlDoc = xmlParser.parseFromString(response,"text/xml");
     document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl").innerHTML;
   })
   .catch((error) => {
