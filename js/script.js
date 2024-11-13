@@ -32,7 +32,6 @@ function getColourLoversColor(){
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.text();
-    
   })
   .then((text) => {
     var xmlParser = new DOMParser();
@@ -40,7 +39,17 @@ function getColourLoversColor(){
     document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl");
   })
   .catch((error) => {
-    document.createElement("p").innerHTML  = `Image getter broke: ${error}`;
+    fetch(`https://http.cat/${error}`, {mode : 'no-cors'}).then((response) => {
+        if(!response.ok){
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.text(); 
+    })
+    .then((text) => {
+      var xmlParser = new DOMParser();
+      var xmlDoc = xmlParser.parseFromString(text,"text/xml");
+      document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl");
+    })
   })
 }
 
@@ -48,18 +57,29 @@ function getColourLoversColor(){
 //returns xml, no idea how to handle that
 function getColourLoversPalette(){
   //uses ColourLovers API
-  fetch("https://www.colourlovers.com/api/palettes/random", {mode : 'no-cors'}).then((response) => {
+  fetch("https://www.colourlovers.com/api/palette/random", {mode : 'no-cors'}).then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return response.getElementByTagName("imageUrl").innerHTML;
+    return response.text();
   })
-  .then((innerHTML) => {
-    window.alert(innerHTML);
-    document.getElementById("color-pic").setAttribute("src", innerHTML);
+  .then((text) => {
+    var xmlParser = new DOMParser();
+    var xmlDoc = xmlParser.parseFromString(text,"text/xml");
+    document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl");
   })
   .catch((error) => {
-    document.createElement("p").innerHTML  = `Image getter broke: ${error}`;
+    fetch(`https://http.cat/${error}`, {mode : 'no-cors'}).then((response) => {
+        if(!response.ok){
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.text(); 
+    })
+    .then((text) => {
+      var xmlParser = new DOMParser();
+      var xmlDoc = xmlParser.parseFromString(text,"text/xml");
+      document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("img");
+    })
   })
 }
 
