@@ -79,7 +79,7 @@ function getCatFact(){
 
 function getDogFact(){
   //uses Daily Cat Facts API
-  fetch("https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1", {mode : 'no-cors'}).then((response) => {
+  fetch("http://dog-api.kinduff.com/api/facts?number=1", {mode : 'no-cors'}).then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
