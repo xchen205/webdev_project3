@@ -40,8 +40,8 @@ function getColourLoversColor(){
     var image=text
     document.getElementById("color-pic").src = text.imageUrl;
   })
-  .catch((error.slice("Error: ")) => {
-    fetch(`https://http.cat/${error}`, {mode : 'no-cors'}).then((response) => {
+  .catch((error) => {
+    fetch(`https://http.cat/${error.slice("Error: ")}`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
@@ -70,8 +70,8 @@ function getColourLoversPalette(){
     var image=text
     document.getElementById("color-pic").src = text.imageUrl;
   })
-  .catch((error.slice("Error: ")) => {
-    fetch(`https://http.cat/${error}`, {mode : 'no-cors'}).then((response) => {
+  .catch((error) => {
+    fetch(`https://http.cat/${error.slice("Error: ")}`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
