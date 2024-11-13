@@ -53,6 +53,8 @@ function getColourLoversColor(){
       var xmlDoc = xmlParser.parseFromString(text,"text/xml");
       document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl");
     })
+    .catch((error) => {
+    }
   })
 }
 
@@ -83,6 +85,8 @@ function getColourLoversPalette(){
       var xmlDoc = xmlParser.parseFromString(text,"text/xml");
       document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("img");
     })
+    .catch((error) => {
+    }
   })
 }
 
