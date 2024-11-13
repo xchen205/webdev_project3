@@ -23,7 +23,6 @@ function init(){
 window.addEventListener("load", init);
 
 function getColourLoversColor(){
-  var xmlParser = new DOMParser();
   //uses ColourLovers API
   fetch("https://www.colourlovers.com/api/colors/random", {mode : 'no-cors'}).then((response) => {
     if(!response.ok){
@@ -33,6 +32,7 @@ function getColourLoversColor(){
     
   })
   .then((response) => {
+    var xmlParser = new DOMParser();
     var xmlDoc = parser.parseFromString(response,"text/xml");
     document.getElementById("color-pic").setAttribute("src", xmlDoc.getElementsByTagName("imageUrl").innerHTML);
   })
