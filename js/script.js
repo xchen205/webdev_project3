@@ -32,7 +32,7 @@ function getColourLoversColor(){
   //uses ColourLovers API
   fetch("https://www.colourlovers.com/api/colors/random", {mode : 'no-cors'}).then((response) => {
     if(!response.ok){
-      throw new Error(`HTTP error: ${response.status}`);
+      throw new Error(`${response.status}`);
     }
     return response.text();
   })
@@ -54,7 +54,7 @@ function getColourLoversColor(){
       document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl");
     })
     .catch((error) => {
-    }
+    })
   })
 }
 
@@ -86,7 +86,7 @@ function getColourLoversPalette(){
       document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("img");
     })
     .catch((error) => {
-    }
+    })
   })
 }
 
