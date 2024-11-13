@@ -15,14 +15,14 @@ function loadAPIs(){
   const paletteButton = document.getElementById("palette-button");
   const colorClearButton = document.getElementById("color-clear-button");
   //cat buttons
-  catButton.addEventListener("onclick", getCatFact);
+  catButton.addEventListener("onclick", getDogFact);
   catClearButton.addEventListener("onclick", removeCatFact);
   //color buttons
   colorButton.addEventListener("onclick", getColourLoversColor);
   paletteButton.addEventListener("onclick", getColourLoversPalette);
   colorClearButton.addEventListener("onclick", removeColourLoversPalette);
   getColourLoversPalette();
-  getCatFact();
+  getDogFact();
 }
 
 function getColourLoversColor(){
@@ -64,6 +64,22 @@ function getColourLoversPalette(){
 function getCatFact(){
   //uses Daily Cat Facts API
   fetch("https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1", {mode : 'no-cors'}).then((response) => {
+    if(!response.ok){
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.text;
+  })
+  .then((text) => {
+    document.getElementById("cat-text").innerHTML = text;
+  })
+  .catch((error) => {
+    document.getElementById("cat-text").innerHTML = `No fact for you: ${error}`;
+  })
+}
+
+function getDogFact(){
+  //uses Daily Cat Facts API
+  fetch("https://dog-facts-api.herokuapp.com/api/v1/resources/dogs?number=1", {mode : 'no-cors'}).then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
