@@ -79,5 +79,5 @@ function removeCatFact(){
 }
 
 function removeColourLoversPalette(){
-  document.getElementById("color-pic").setAttribute("src", "");
+  document.getElementById("color-pic").src = "";
 }
