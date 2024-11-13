@@ -3,10 +3,12 @@ function init(){
   const catButton = document.getElementById("cat-button");
   const catClearButton = document.getElementById("cat-clear-button");
   const colorButton = document.getElementById("color-button");
+  const paletteButton = document.getElementById("palette-button");
   const colorClearButton = document.getElementById("color-clear-button");
   catButton.addEventListener("onclick", getCatFact);
   catClearButton.addEventListener("onclick", removeCatFact);
-  colorButton.addEventListener("onclick", getColourLoversPalette);
+  colorButton.addEventListener("onclick", getColourLoversColor);
+  paletteButton.addEventListener("onclick", getColourLoversPalette);
   colorClearButton.addEventListener("onclick", removeColourLoversPalette);
   getColourLoversPalette();
   getCatFact();
@@ -14,9 +16,26 @@ function init(){
 
 window.addEventListener("load", init);
 
-function getColourLoversPalette(){
+function getColourLoversColor(){
   //uses ColourLovers API
   fetch("https://www.colourlovers.com/api/colors/random", {mode : 'no-cors'}).then((response) => {
+    if(!response.ok){
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.getElementByTagName("imageUrl").innerHTML;
+  })
+  .then((innerHTML) => {
+    window.alert(innerHTML);
+    document.getElementById("color-pic").setAttribute("src", innerHTML);
+  })
+  .catch((error) => {
+    document.createElement("p").innerHTML  = `Image getter broke: ${error}`;
+  })
+}
+
+function getColourLoversPalette(){
+  //uses ColourLovers API
+  fetch("http://www.colourlovers.com/api/palettes/random", {mode : 'no-cors'}).then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
