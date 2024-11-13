@@ -31,7 +31,7 @@ function getColourLoversColor(){
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return response.getElementByTagName("imageUrl").innerHTML;
+    return response;
     
   })
   .then((response) => {
