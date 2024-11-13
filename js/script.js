@@ -30,16 +30,15 @@ function loadAPIs(){
 
 function getColourLoversColor(){
   //uses ColourLovers API
-  fetch("https://www.colourlovers.com/api/colors/random", {mode : 'no-cors'}).then((response) => {
+  fetch("https://www.colourlovers.com/api/colors/random?format=json", {mode: "no-cors"}).then((response) => {
     if(!response.ok){
       throw new Error(`${response.status}`);
     }
     return response.text();
   })
   .then((text) => {
-    var xmlParser = new DOMParser();
-    var xmlDoc = xmlParser.parseFromString(text,"text/xml");
-    document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl");
+    var image=text
+    document.getElementById("color-pic").src = text.imageUrl;
   })
   .catch((error.slice("Error: ")) => {
     fetch(`https://http.cat/${error}`, {mode : 'no-cors'}).then((response) => {
@@ -49,9 +48,8 @@ function getColourLoversColor(){
     return response.text(); 
     })
     .then((text) => {
-      var xmlParser = new DOMParser();
-      var xmlDoc = xmlParser.parseFromString(text,"text/xml");
-      document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl");
+      var image=text
+      document.getElementById("color-pic").src = text.img;
     })
     .catch((error) => {
     })
@@ -62,28 +60,26 @@ function getColourLoversColor(){
 //returns xml, no idea how to handle that
 function getColourLoversPalette(){
   //uses ColourLovers API
-  fetch("https://www.colourlovers.com/api/palette/random", {mode : 'no-cors'}).then((response) => {
+  fetch("https://www.colourlovers.com/api/palettes/random?format=json", {mode: "no-cors"}).then((response) => {
     if(!response.ok){
       throw new Error(`${response.status}`);
     }
     return response.text();
   })
   .then((text) => {
-    var xmlParser = new DOMParser();
-    var xmlDoc = xmlParser.parseFromString(text,"text/xml");
-    document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl");
+    var image=text
+    document.getElementById("color-pic").src = text.imageUrl;
   })
   .catch((error.slice("Error: ")) => {
     fetch(`https://http.cat/${error}`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
-      throw new Error(`${response.status}`);
+      throw new Error(`HTTP error: ${response.status}`);
     }
     return response.text(); 
     })
     .then((text) => {
-      var xmlParser = new DOMParser();
-      var xmlDoc = xmlParser.parseFromString(text,"text/xml");
-      document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("img");
+      var image=text
+      document.getElementById("color-pic").src = text.img;
     })
     .catch((error) => {
     })
