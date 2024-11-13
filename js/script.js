@@ -11,7 +11,7 @@ function loadAPIs(){
   const catButton = document.getElementById("cat-button");
   const catClearButton = document.getElementById("cat-clear-button");
   catButton.disabled = true;
-  catCleatButton.disabled = true;
+  catClearButton.disabled = true;
   document.getElementById("less-button").disabled = true;
   //color buttons
   const colorButton = document.getElementById("color-button");
