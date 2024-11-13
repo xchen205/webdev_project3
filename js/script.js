@@ -1,12 +1,16 @@
 function init(){
   const bodyFit = window.innerWidth;
+  //cat variables
   const catButton = document.getElementById("cat-button");
   const catClearButton = document.getElementById("cat-clear-button");
+  //color buttons
   const colorButton = document.getElementById("color-button");
   const paletteButton = document.getElementById("palette-button");
   const colorClearButton = document.getElementById("color-clear-button");
+  //cat buttons
   catButton.addEventListener("onclick", getCatFact);
   catClearButton.addEventListener("onclick", removeCatFact);
+  //color buttons
   colorButton.addEventListener("onclick", getColourLoversColor);
   paletteButton.addEventListener("onclick", getColourLoversPalette);
   colorClearButton.addEventListener("onclick", removeColourLoversPalette);
@@ -17,16 +21,18 @@ function init(){
 window.addEventListener("load", init);
 
 function getColourLoversColor(){
+  var xmlParser = new DOMParser();
   //uses ColourLovers API
   fetch("https://www.colourlovers.com/api/colors/random", {mode : 'no-cors'}).then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.getElementByTagName("imageUrl").innerHTML;
+    
   })
-  .then((innerHTML) => {
-    window.alert(innerHTML);
-    document.getElementById("color-pic").setAttribute("src", innerHTML);
+  .then((response) => {
+    var xmlDoc = parser.parseFromString(response,"text/xml");
+    document.getElementById("color-pic").setAttribute("src", xmlDoc.getElementsByTagName("imageUrl"));
   })
   .catch((error) => {
     document.createElement("p").innerHTML  = `Image getter broke: ${error}`;
