@@ -22,9 +22,9 @@ function getColourLoversPalette(){
     }
     return response.getElementByTagName("imageUrl").innerHTML;
   })
-  .then((imageUrl) => {
-    window.alert(imageUrl);
-    document.getElementById("color-pic").setAttribute("src", imageUrl);
+  .then((innerHTML) => {
+    window.alert(innerHTML);
+    document.getElementById("color-pic").setAttribute("src", innerHTML);
   })
   .catch((error) => {
     document.createElement("p").innerHTML  = `Image getter broke: ${error}`;
