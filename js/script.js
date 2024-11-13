@@ -19,6 +19,7 @@ function getColourLoversPalette(){
     return response.getElementByTagName("imageUrl").innerHTML;
   })
   .then((imageUrl) => {
+    window.alert(imageUrl);
     document.getElementById("color-pic").setAttribute("src", imageUrl);
   })
   .catch((error) => {
