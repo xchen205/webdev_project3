@@ -83,7 +83,7 @@ function getDogFact(){
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return response.text;
+    return response.text();
   })
   .then((text) => {
     document.getElementById("cat-text").innerHTML = text;
