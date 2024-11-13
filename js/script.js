@@ -31,12 +31,12 @@ function getColourLoversColor(){
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
-    return response;
+    return response.text();
     
   })
-  .then((response) => {
+  .then((text) => {
     var xmlParser = new DOMParser();
-    var xmlDoc = xmlParser.parseFromString(response,"text/xml");
+    var xmlDoc = xmlParser.parseFromString(text,"text/xml");
     document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl");
   })
   .catch((error) => {
