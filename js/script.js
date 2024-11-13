@@ -37,7 +37,7 @@ function getColourLoversColor(){
   .then((response) => {
     var xmlParser = new DOMParser();
     var xmlDoc = xmlParser.parseFromString(response,"text/xml");
-    document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl").innerHTML;
+    document.getElementById("color-pic").src = xmlDoc.getElementsByTagName("imageUrl");
   })
   .catch((error) => {
     document.createElement("p").innerHTML  = `Image getter broke: ${error}`;
