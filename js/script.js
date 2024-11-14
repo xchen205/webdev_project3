@@ -37,7 +37,7 @@ function getColourLoversColor(){
     return response.text();
   })
   .then((text) => {
-    var image=text
+    var image=text;
     document.getElementById("color-pic").src = image.imageUrl;//.toString().replace("http", "https");
   })
   .catch((error) => {
@@ -48,7 +48,7 @@ function getColourLoversColor(){
     return response.text(); 
     })
     .then((text) => {
-      var image=text
+      var image=text;
       document.getElementById("color-pic").src = image.img;
     })
     .catch((error) => {
@@ -67,7 +67,7 @@ function getColourLoversPalette(){
     return response.text();
   })
   .then((text) => {
-    var image=text
+    var image=text;
     document.getElementById("color-pic").src = image.imageUrl;
   })
   .catch((error) => {
@@ -78,7 +78,7 @@ function getColourLoversPalette(){
     return response.text(); 
     })
     .then((text) => {
-      var image=text
+      var image=text;
       document.getElementById("color-pic").src = image.img;
     })
     .catch((error) => {
