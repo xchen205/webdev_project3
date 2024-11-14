@@ -38,7 +38,7 @@ function getColourLoversColor(){
   })
   .then((text) => {
     var image=text
-    document.getElementById("color-pic").src = text.imageUrl;//.toString().replace("http", "https");
+    document.getElementById("color-pic").src = image.imageUrl;//.toString().replace("http", "https");
   })
   .catch((error) => {
     fetch(`https://http.cat/images/${(error.toString()).slice(7, 10)}.jpg`, {mode : 'no-cors'}).then((response) => {
@@ -49,7 +49,7 @@ function getColourLoversColor(){
     })
     .then((text) => {
       var image=text
-      document.getElementById("color-pic").src = text.img;
+      document.getElementById("color-pic").src = image.img;
     })
     .catch((error) => {
     })
@@ -68,7 +68,7 @@ function getColourLoversPalette(){
   })
   .then((text) => {
     var image=text
-    document.getElementById("color-pic").src = text.imageUrl;
+    document.getElementById("color-pic").src = image.imageUrl;
   })
   .catch((error) => {
     fetch(`https://http.cat/images/${(error.toString()).slice(7, 10)}.jpg`, {mode : 'no-cors'}).then((response) => {
@@ -79,7 +79,7 @@ function getColourLoversPalette(){
     })
     .then((text) => {
       var image=text
-      document.getElementById("color-pic").src = text.img;
+      document.getElementById("color-pic").src = image.img;
     })
     .catch((error) => {
     })
