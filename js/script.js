@@ -36,7 +36,8 @@ function getColourLoversColor(){
     }
     return response.text();
   }).then((text) => {
-    document.getElementById("color-pic").src = text.imageUrl.replace(/\\/g,''); //.toString().replace("http", "https");
+    window.alert(text.imageUrl);
+    document.getElementById("color-pic").src = text.imageUrl; //.toString().replace("http", "https");
   }).catch((error) => {
     fetch(`https://http.cat/images/${(error.toString()).slice(7, 10)}.jpg`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
@@ -44,8 +45,7 @@ function getColourLoversColor(){
     }
     return response.text(); 
     }).then((text) => {
-      var image=text;
-      document.getElementById("color-pic").src = image.img;
+      document.getElementById("color-pic").src = text.img;
     }).catch((error) => {
     })
   })
@@ -69,8 +69,7 @@ function getColourLoversPalette(){
     }
     return response.text(); 
     }).then((text) => {
-      var image=text;
-      document.getElementById("color-pic").src = image.img;
+      document.getElementById("color-pic").src = text.img;
     }).catch((error) => {
     
     })
