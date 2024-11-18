@@ -1,5 +1,6 @@
 function init(){
   if(window.location.pathname == "/webdev_project3/apiuserpage.html"){
+    window.alert("test");
     loadAPIs();
   }
 }
