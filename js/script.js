@@ -35,23 +35,18 @@ function getColourLoversColor(){
       throw new Error(`${response.status}`);
     }
     return response.text();
-  })
-  .then((text) => {
-    var image=text;
-    document.getElementById("color-pic").src = image.imageUrl;//.toString().replace("http", "https");
-  })
-  .catch((error) => {
+  }).then((text) => {
+    document.getElementById("color-pic").src = text.imageUrl;//.toString().replace("http", "https");
+  }).catch((error) => {
     fetch(`https://http.cat/images/${(error.toString()).slice(7, 10)}.jpg`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.text(); 
-    })
-    .then((text) => {
+    }).then((text) => {
       var image=text;
       document.getElementById("color-pic").src = image.img;
-    })
-    .catch((error) => {
+    }).catch((error) => {
     })
   })
 }
@@ -65,23 +60,20 @@ function getColourLoversPalette(){
       throw new Error(`${response.status}`);
     }
     return response.text();
-  })
-  .then((text) => {
+  }).then((text) => {
     var image=text;
     document.getElementById("color-pic").src = image.imageUrl;
-  })
-  .catch((error) => {
+  }).catch((error) => {
     fetch(`https://http.cat/images/${(error.toString()).slice(7, 10)}.jpg`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.text(); 
-    })
-    .then((text) => {
+    }).then((text) => {
       var image=text;
       document.getElementById("color-pic").src = image.img;
-    })
-    .catch((error) => {
+    }).catch((error) => {
+    
     })
   })
 }
@@ -94,11 +86,9 @@ function getCatFact(){
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.text;
-  })
-  .then((text) => {
+  }).then((text) => {
     document.getElementById("cat-text").innerHTML = text;
-  })
-  .catch((error) => {
+  }).catch((error) => {
     document.getElementById("cat-text").innerHTML = `No fact for you: ${error}`;
   })
 }
@@ -111,11 +101,9 @@ function getDogFact(){
       throw new Error(`HTTP error: ${response.status}`);
     }
     return response.text();
-  })
-  .then((text) => {
+  }).then((text) => {
     document.getElementById("cat-text").innerHTML = text;
-  })
-  .catch((error) => {
+  }).catch((error) => {
     document.getElementById("cat-text").innerHTML = `No fact for you: ${error}`;
   })
 }
