@@ -1,6 +1,5 @@
 function init(){
   if(window.location.pathname == "/webdev_project3/apiuserpage.html"){
-    window.alert("test");
     loadAPIs();
   }
 }
@@ -35,6 +34,7 @@ function getColourLoversColor(){
     if(!response.ok){
       throw new Error(`${response.status}`);
     }
+    window.alert("test");
     return response.text();
   }).then((text) => {
     window.alert(text.imageUrl);
