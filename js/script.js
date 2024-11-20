@@ -37,7 +37,7 @@ function getColourLoversColor(){
     document.getElementById("color-pic").alt = "a color";
   }).catch((error) => {
     console.log(`${error}, getting a cat image`);
-    fetch(`https://http.cat/images/${(error.toString()).slice(7, 10)}.jpg`, {mode : 'no-cors'}).then((response) => {
+    fetch(`https://http.cat/images/${(error.toString()).slice(10, 13)}.jpg`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
@@ -66,7 +66,7 @@ function getColourLoversPalette(){
     document.getElementById("color-pic").alt = "a set of colors";
   }).catch((error) => {
     console.log(`${error}, getting a cat image`);
-    fetch(`https://http.cat/images/${(error.toString()).slice(7, 10)}.jpg`, {mode : 'no-cors'}).then((response) => {
+    fetch(`https://http.cat/images/${(error.toString()).slice(10, 13)}.jpg`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
