@@ -23,7 +23,7 @@ function loadAPIs(){
   //color buttons
   colorButton.addEventListener("onclick", getColourLoversColor);
   paletteButton.addEventListener("onclick", getColourLoversPalette);
-  colorClearButton.addEventListener("onclick", removeColourLoversPalette);
+  colorClearButton.addEventListener("onclick", removeColourLoversPalette());
   getColourLoversPalette();
   //getDogFact();
 }
