@@ -49,6 +49,7 @@ function getColourLoversColor(){
       document.getElementById("color-pic").src = text.img;
       document.getElementById("color-pic").alt = "a color";
     }).catch((error) => {
+      document.getElementById("color-pic").src = "./images/server.png";
     })
   })
 }
@@ -74,7 +75,7 @@ function getColourLoversPalette(){
       document.getElementById("color-pic").src = text.img;
       document.getElementById("color-pic").alt = "a set of colors";
     }).catch((error) => {
-    
+      document.getElementById("color-pic").src = "./images/server.png";
     })
   })
 }
