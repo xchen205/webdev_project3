@@ -31,7 +31,7 @@ function getColourLoversColor(){
     headers: { 
     'Access-Control-Allow-Origin': "xchen205.github.io/webdev_project3/apiuserpage.html",
     'Content-Type': 'application/json'
-    Access-Control-Allow-Headers: *; 
+    "Access-Control-Allow-Headers": *; 
     }
   }).then((response) => {
     if(!response.ok){
