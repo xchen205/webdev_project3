@@ -14,7 +14,7 @@ function init(){
     //colorButton.addEventListener("onclick", getColourLoversColor);
     //paletteButton.addEventListener("onclick", getColourLoversPalette);
     //colorClearButton.addEventListener("onclick", removeColourLoversPalette());
-    getColourLoversColor();
+    getDogPic();
     getDogFact();
   }
 }
@@ -74,6 +74,33 @@ function getColourLoversPalette(){
   }).then((text) => {
     document.getElementById("color-pic").src = image.imageUrl;
     document.getElementById("color-pic").alt = "a set of colors";
+  }).catch((error) => {
+    console.log(`${error}, getting a cat image`);
+    fetch(`https://http.cat/images/${(error.toString()).slice(14, 17)}.jpg`).then((response) => {
+        if(!response.ok){
+      throw new Error(`HTTP error: ${response.status}`);
+    }
+    return response.text(); 
+    }).then((text) => {
+      document.getElementById("color-pic").src = text.img;
+      document.getElementById("color-pic").alt = "a set of colors";
+    }).catch((error) => {
+      console.log(`${error}, giving up`);
+      document.getElementById("color-pic").src = "./images/server.png";
+    })
+  })
+}
+
+function getDogPic(){
+  //uses ColourLovers API
+  fetch("https://random.dog/woof.json").then((response) => {
+    if(!response.ok){
+      throw new Error(`${response.status}`);
+    }
+    return response.text();
+  }).then((text) => {
+    document.getElementById("color-pic").src = text.url;
+    document.getElementById("color-pic").alt = "a dog!";
   }).catch((error) => {
     console.log(`${error}, getting a cat image`);
     fetch(`https://http.cat/images/${(error.toString()).slice(14, 17)}.jpg`).then((response) => {
