@@ -47,13 +47,14 @@ function getColourLoversColor(){
     return response.text(); 
     }).then((text) => {
       document.getElementById("color-pic").src = text.img;
+      document.getElementById("color-pic").alt = "a color";
     }).catch((error) => {
     })
   })
 }
 
 
-//returns xml, no idea how to handle that
+//error 0?
 function getColourLoversPalette(){
   //uses ColourLovers API
   fetch("https://www.colourlovers.com/api/palettes/random?format=json", {mode: "no-cors"}).then((response) => {
@@ -71,6 +72,7 @@ function getColourLoversPalette(){
     return response.text(); 
     }).then((text) => {
       document.getElementById("color-pic").src = text.img;
+      document.getElementById("color-pic").alt = "a set of colors";
     }).catch((error) => {
     
     })
