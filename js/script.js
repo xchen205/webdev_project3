@@ -43,7 +43,13 @@ function getColourLoversColor(){
     document.getElementById("color-pic").alt = "a color";
   }).catch((error) => {
     console.log(`${error.toString()}, getting a cat image`);
-    fetch(`https://http.cat/images/${(error.toString()).slice(14, 17)}.jpg`).then((response) => {
+    fetch(`https://http.cat/images/${(error.toString()).slice(14, 17)}.jpg`, {
+    method: 'GET',
+    headers: { 
+      'Access-Control-Allow-Origin': "xchen205.github.io/webdev_project3/apiuserpage.html",
+      'Content-Type': 'application/json'
+      }
+    }).then((response) => {
         if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
