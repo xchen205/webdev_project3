@@ -3,9 +3,6 @@ function init(){
     //cat variables
     const catButton = document.getElementById("cat-button");
     const catClearButton = document.getElementById("cat-clear-button");
-    catButton.disabled = true;
-    catClearButton.disabled = true;
-    document.getElementById("less-button").disabled = true;
     //color buttons
     //const colorButton = document.getElementById("color-button");
     //const paletteButton = document.getElementById("palette-button");
@@ -18,7 +15,7 @@ function init(){
     //paletteButton.addEventListener("onclick", getColourLoversPalette);
     //colorClearButton.addEventListener("onclick", removeColourLoversPalette());
     getColourLoversColor();
-    //getDogFact();
+    getDogFact();
   }
 }
 
