@@ -26,7 +26,10 @@ window.addEventListener("load", init);
 
 function getColourLoversColor(){
   //uses ColourLovers API
-  fetch("https://www.colourlovers.com/api/colors/random?format=json", {credentials: 'include'}).then((response) => {
+  fetch("https://www.colourlovers.com/api/colors/random?format=json", {
+    method: 'GET',
+    headers: { 'Content-Type': 'application/json'}
+  }).then((response) => {
     if(!response.ok){
       throw new Error(`${response.status}`);
     }
@@ -36,8 +39,8 @@ function getColourLoversColor(){
     document.getElementById("color-pic").src = text.imageUrl; //.toString().replace("http", "https");
     document.getElementById("color-pic").alt = "a color";
   }).catch((error) => {
-    console.log(`${error}, getting a cat image`);
-    fetch(`https://http.cat/images/${(error.toString()).slice(10, 13)}.jpg`).then((response) => {
+    console.log(`${error.toString()}, getting a cat image`);
+    fetch(`https://http.cat/images/${(error.toString()).slice(14, 17)}.jpg`).then((response) => {
         if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
@@ -66,7 +69,7 @@ function getColourLoversPalette(){
     document.getElementById("color-pic").alt = "a set of colors";
   }).catch((error) => {
     console.log(`${error}, getting a cat image`);
-    fetch(`https://http.cat/images/${(error.toString()).slice(10, 13)}.jpg`).then((response) => {
+    fetch(`https://http.cat/images/${(error.toString()).slice(14, 17)}.jpg`).then((response) => {
         if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
