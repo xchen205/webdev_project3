@@ -28,7 +28,10 @@ function getColourLoversColor(){
   //uses ColourLovers API
   fetch("https://www.colourlovers.com/api/colors/random?format=json", {
     method: 'GET',
-    headers: { 'Content-Type': 'application/json'}
+    headers: { 
+    'Access-Control-Allow-Origin': "xchen205.github.io/webdev_project3/apiuserpage.html",
+    'Content-Type': 'application/json'
+    }
   }).then((response) => {
     if(!response.ok){
       throw new Error(`${response.status}`);
