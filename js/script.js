@@ -26,7 +26,7 @@ window.addEventListener("load", init);
 
 function getColourLoversColor(){
   //uses ColourLovers API
-  fetch("https://www.colourlovers.com/api/colors/random?format=json", {mode: "no-cors"}).then((response) => {
+  fetch("https://www.colourlovers.com/api/colors/random?format=json", {mode: "cors"}).then((response) => {
     if(!response.ok){
       throw new Error(`${response.status}`);
     }
