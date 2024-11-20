@@ -39,6 +39,7 @@ function getColourLoversColor(){
   }).then((text) => {
     window.alert(text.imageUrl);
     document.getElementById("color-pic").src = text.imageUrl; //.toString().replace("http", "https");
+    document.getElementById("color-pic").alt = "a color";
   }).catch((error) => {
     fetch(`https://http.cat/images/${(error.toString()).slice(7, 10)}.jpg`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
@@ -64,7 +65,8 @@ function getColourLoversPalette(){
     }
     return response.text();
   }).then((text) => {
-    document.getElementById("color-pic").src = image.imageUrl.replace(/\\/g,'');
+    document.getElementById("color-pic").src = image.imageUrl;
+    document.getElementById("color-pic").alt = "a set of colors";
   }).catch((error) => {
     fetch(`https://http.cat/images/${(error.toString()).slice(7, 10)}.jpg`, {mode : 'no-cors'}).then((response) => {
         if(!response.ok){
