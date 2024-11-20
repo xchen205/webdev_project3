@@ -17,7 +17,7 @@ function init(){
     //colorButton.addEventListener("onclick", getColourLoversColor);
     //paletteButton.addEventListener("onclick", getColourLoversPalette);
     //colorClearButton.addEventListener("onclick", removeColourLoversPalette());
-    getColourLoversPalette();
+    getColourLoversColor();
     //getDogFact();
   }
 }
