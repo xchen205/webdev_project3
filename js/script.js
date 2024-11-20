@@ -26,7 +26,7 @@ window.addEventListener("load", init);
 
 function getColourLoversColor(){
   //uses ColourLovers API
-  fetch("https://www.colourlovers.com/api/colors/random?format=json", {mode: "cors"}).then((response) => {
+  fetch("https://www.colourlovers.com/api/colors/random?format=json").then((response) => {
     if(!response.ok){
       throw new Error(`${response.status}`);
     }
@@ -37,7 +37,7 @@ function getColourLoversColor(){
     document.getElementById("color-pic").alt = "a color";
   }).catch((error) => {
     console.log(`${error}, getting a cat image`);
-    fetch(`https://http.cat/images/${(error.toString()).slice(10, 13)}.jpg`, {mode : 'no-cors'}).then((response) => {
+    fetch(`https://http.cat/images/${(error.toString()).slice(10, 13)}.jpg`).then((response) => {
         if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
@@ -56,7 +56,7 @@ function getColourLoversColor(){
 //error 0?
 function getColourLoversPalette(){
   //uses ColourLovers API
-  fetch("https://www.colourlovers.com/api/palettes/random?format=json", {mode: "no-cors"}).then((response) => {
+  fetch("https://www.colourlovers.com/api/palettes/random?format=json").then((response) => {
     if(!response.ok){
       throw new Error(`${response.status}`);
     }
@@ -66,7 +66,7 @@ function getColourLoversPalette(){
     document.getElementById("color-pic").alt = "a set of colors";
   }).catch((error) => {
     console.log(`${error}, getting a cat image`);
-    fetch(`https://http.cat/images/${(error.toString()).slice(10, 13)}.jpg`, {mode : 'no-cors'}).then((response) => {
+    fetch(`https://http.cat/images/${(error.toString()).slice(10, 13)}.jpg`).then((response) => {
         if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
@@ -84,7 +84,7 @@ function getColourLoversPalette(){
 //http error 503
 function getCatFact(){
   //uses Daily Cat Facts API
-  fetch("https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1", {mode : 'no-cors'}).then((response) => {
+  fetch("https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1").then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
@@ -99,7 +99,7 @@ function getCatFact(){
 //http error 403
 function getDogFact(){
   //uses Dog Facts API
-  fetch("https://dog-api.kinduff.com/api/facts?number=1", {mode : 'no-cors'}).then((response) => {
+  fetch("https://dog-api.kinduff.com/api/facts?number=1").then((response) => {
     if(!response.ok){
       throw new Error(`HTTP error: ${response.status}`);
     }
