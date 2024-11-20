@@ -115,7 +115,7 @@ function getDogFact(){
     }
     return response.text();
   }).then((text) => {
-    document.getElementById("cat-text").innerHTML = text.facts;
+    document.getElementById("cat-text").innerHTML = text/*.facts*/;
   }).catch((error) => {
     document.getElementById("cat-text").innerHTML = `No fact for you: ${error}`;
   })
