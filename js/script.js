@@ -1,8 +1,8 @@
 function init(){
   if(window.location.pathname == "/webdev_project3/apiuserpage.html"){
     //cat variables
-    //const catButton = document.getElementById("cat-button");
-    //const catClearButton = document.getElementById("cat-clear-button");
+    const catButton = document.getElementById("cat-button");
+    const catClearButton = document.getElementById("cat-clear-button");
     catButton.disabled = true;
     catClearButton.disabled = true;
     document.getElementById("less-button").disabled = true;
