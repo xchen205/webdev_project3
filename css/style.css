@@ -226,3 +226,7 @@ apiuserpage page css
 button {
   margin: 5px;
 }
+
+#color-pic {
+  max-width: 60%;
+}
