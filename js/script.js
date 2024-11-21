@@ -109,7 +109,7 @@ function getDogPic(){
     }
     return response.text(); 
     }).then((text) => {
-      document.getElementById("color-pic").src = text.img;
+      document.getElementById("color-pic").src = JSON.parse(text).img;
       document.getElementById("color-pic").alt = "a set of colors";
     }).catch((error) => {
       console.log(`${error}, giving up`);
@@ -142,7 +142,7 @@ function getDogFact(){
     }
     return response.text();
   }).then((text) => {
-    document.getElementById("cat-text").innerHTML = text/*.facts*/;
+    document.getElementById("cat-text").innerHTML = JSON.parse(text).facts;
   }).catch((error) => {
     document.getElementById("cat-text").innerHTML = `No fact for you: ${error}`;
   })
