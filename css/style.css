@@ -206,7 +206,7 @@ stuff page css
   max-width: 50%;
 }
 
-#the-video {
+#the-video video {
   float: right;
   max-width: 50%;
 }
@@ -230,7 +230,7 @@ stuff page css
     max-width: 100%
   }
   
-  #the-video {
+  #the-video video {
   max-width: 50%;
 }
 }
