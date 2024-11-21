@@ -31,7 +31,6 @@
         <br>
         <button id="cat-button" type="button" onclick="getDogFact()">Click here for another dog fact</button>
         <button id="cat-clear-button" type="button" onclick="removeCatFact()">Click here to clear the dog fact</button>
-        <button id="less-button" type="button">(unused)</button>
       </section>
     </div>
     <div id="colors">
@@ -40,7 +39,6 @@
         <br>
         <button id="color-button" type="button" onclick="getDogPic()">Click here for another dog pic</button>
         <button id="color-clear-button" type="button" onclick="removeColourLoversPalette()">Click here to clear the color</button>
-        <button id="palette-button" type="button" onclick="getColourLoversPalette()">(unused)</button>
       </section>
     </div>
     <div id="map"></div>
@@ -49,7 +47,7 @@
           var map;
           function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-              center: {lat: -34.397, lng: 150.644},
+              center: {lat: 0.000, lng: 0.000},
               zoom: 8
             });
           }
