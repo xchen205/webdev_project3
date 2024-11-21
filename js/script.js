@@ -99,7 +99,7 @@ function getDogPic(){
     }
     return response.text();
   }).then((text) => {
-    document.getElementById("color-pic").src = text.url;
+    document.getElementById("color-pic").src = JSON.parse(text).url;
     document.getElementById("color-pic").alt = "a dog!";
   }).catch((error) => {
     console.log(`${error}, getting a cat image`);
@@ -109,7 +109,7 @@ function getDogPic(){
     }
     return response.text(); 
     }).then((text) => {
-      document.getElementById("color-pic").src = JSON.parse(text).img;
+      document.getElementById("color-pic").src = text.img;
       document.getElementById("color-pic").alt = "a set of colors";
     }).catch((error) => {
       console.log(`${error}, giving up`);
