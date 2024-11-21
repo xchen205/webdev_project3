@@ -203,10 +203,12 @@ stuff page css
   border-style: outset;
   float: right;
   margin: 10px;
+  max-width: 50%;
 }
 
 #the-video {
   float: right;
+  max-width: 50%;
 }
 
 #the-video p {
@@ -223,6 +225,15 @@ stuff page css
   display: block;
 }
 
+@media (min-width: 600px){
+  #apple-pic img, #hand-pic img {
+    max-width: 100%
+  }
+  
+  #the-video {
+  max-width: 50%;
+}
+}
 /*
 apiuserpage page css
 */
