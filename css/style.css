@@ -46,8 +46,12 @@ p, strong, ul, li {
   font-family: "Times New Roman", "Arial";
 }
 
-p, ul, li {
+p, ul {
   font-size: 1.5em;
+}
+
+li {
+  font-size: 1em;
 }
 
 h1 {
@@ -102,7 +106,7 @@ img, video {
     margin-left: 5%;
     margin-right: 5%;
   }
-  p, ul, li {
+  p, ul {
     font-size: 1em;
   }
   h1 {
