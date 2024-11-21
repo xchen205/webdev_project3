@@ -21,6 +21,7 @@ function init(){
 
 window.addEventListener("load", init);
 
+//cors error
 function getColourLoversColor(){
   //uses ColourLovers API
   fetch("https://www.colourlovers.com/api/colors/random?format=json", {
@@ -63,7 +64,7 @@ function getColourLoversColor(){
 }
 
 
-//error 0?
+//cors error
 function getColourLoversPalette(){
   //uses ColourLovers API
   fetch("https://www.colourlovers.com/api/palettes/random?format=json").then((response) => {
@@ -91,6 +92,7 @@ function getColourLoversPalette(){
   })
 }
 
+//works!! \o/
 function getDogPic(){
   //uses ColourLovers API
   fetch("https://random.dog/woof.json").then((response) => {
@@ -133,7 +135,7 @@ function getCatFact(){
   })
 }
 
-//http error 403
+//works!! \o/
 function getDogFact(){
   //uses Dog Facts API
   fetch("https://dog-api.kinduff.com/api/facts?number=1").then((response) => {
@@ -155,3 +157,4 @@ function removeCatFact(){
 function removeColourLoversPalette(){
   document.getElementById("color-pic").src = "";
 }
+
