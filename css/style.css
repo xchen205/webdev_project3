@@ -247,8 +247,8 @@ button {
   max-width: 60%;
 }
 
-/*#map {
+#map {
   width: 100%;
   height: 500px;
   background-image: rgba(0, 0, 0, 0);
-}*/
+}
