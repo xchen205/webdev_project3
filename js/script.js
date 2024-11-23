@@ -42,23 +42,7 @@ function getColourLoversColor(){
     document.getElementById("color-pic").src = text.imageUrl; //.toString().replace("http", "https");
     document.getElementById("color-pic").alt = "a color";
   }).catch((error) => {
-    console.log(`${error.toString()}, getting a cat image`);
-    fetch(`https://http.cat/images/${(error.toString()).slice(14, 17)}.jpg`, {
-    method: 'GET',
-    headers: { 
-      'Access-Control-Allow-Origin': "xchen205.github.io/webdev_project3/apiuserpage.html",
-      'Content-Type': 'application/json'
-      }
-    }).then((response) => {
-        if(!response.ok){
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    return response.text(); 
-    }).then((text) => {
-      document.getElementById("color-pic").src = text.img;
-      document.getElementById("color-pic").alt = "a color";
-    }).catch((error) => {
-      console.log(`${error}, giving up`);
+      console.log(`${error} on function getColourLoversColor()`);
       document.getElementById("color-pic").src = "./images/server.png";
     })
   })
@@ -77,17 +61,7 @@ function getColourLoversPalette(){
     document.getElementById("color-pic").src = image.imageUrl;
     document.getElementById("color-pic").alt = "a set of colors";
   }).catch((error) => {
-    console.log(`${error}, getting a cat image`);
-    fetch(`https://http.cat/images/${(error.toString()).slice(14, 17)}.jpg`).then((response) => {
-        if(!response.ok){
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    return response.text(); 
-    }).then((text) => {
-      document.getElementById("color-pic").src = text.img;
-      document.getElementById("color-pic").alt = "a set of colors";
-    }).catch((error) => {
-      console.log(`${error}, giving up`);
+      console.log(`${error} on function getColourLoversPalette()`);
       document.getElementById("color-pic").src = "./images/server.png";
     })
   })
@@ -105,17 +79,7 @@ function getDogPic(){
     document.getElementById("color-pic").src = JSON.parse(text).url;
     document.getElementById("color-pic").alt = "a dog!";
   }).catch((error) => {
-    console.log(`${error}, getting a cat image`);
-    fetch(`https://http.cat/images/${(error.toString()).slice(14, 17)}.jpg`).then((response) => {
-        if(!response.ok){
-      throw new Error(`HTTP error: ${response.status}`);
-    }
-    return response.text(); 
-    }).then((text) => {
-      document.getElementById("color-pic").src = text.img;
-      document.getElementById("color-pic").alt = "a set of colors";
-    }).catch((error) => {
-      console.log(`${error}, giving up`);
+      console.log(`${error} on function getDogPic()`);
       document.getElementById("color-pic").src = "./images/server.png";
     })
   })

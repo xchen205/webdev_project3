@@ -238,7 +238,7 @@ stuff page css
 apiuserpage page css
 */
 
-button {
+section button {
   margin: 5px;
   display: inline-block;
   background-image: linear-gradient(to left, rgba(255, 0, 0, 0.5), rgba(255, 0, 0, 0));
