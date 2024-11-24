@@ -42,9 +42,8 @@ function getColourLoversColor(){
     document.getElementById("color-pic").src = text.imageUrl; //.toString().replace("http", "https");
     document.getElementById("color-pic").alt = "a color";
   }).catch((error) => {
-      console.log(`${error} on function getColourLoversColor()`);
-      document.getElementById("color-pic").src = "./images/server.png";
-    })
+    console.log(`${error} on function getColourLoversColor()`);
+    document.getElementById("color-pic").src = "./images/server.png";
   })
 }
 
@@ -61,9 +60,8 @@ function getColourLoversPalette(){
     document.getElementById("color-pic").src = image.imageUrl;
     document.getElementById("color-pic").alt = "a set of colors";
   }).catch((error) => {
-      console.log(`${error} on function getColourLoversPalette()`);
-      document.getElementById("color-pic").src = "./images/server.png";
-    })
+    console.log(`${error} on function getColourLoversPalette()`);
+    document.getElementById("color-pic").src = "./images/server.png";
   })
 }
 
@@ -79,9 +77,8 @@ function getDogPic(){
     document.getElementById("color-pic").src = JSON.parse(text).url;
     document.getElementById("color-pic").alt = "a dog!";
   }).catch((error) => {
-      console.log(`${error} on function getDogPic()`);
-      document.getElementById("color-pic").src = "./images/server.png";
-    })
+    console.log(`${error} on function getDogPic()`);
+    document.getElementById("color-pic").src = "./images/server.png";
   })
 }
 
