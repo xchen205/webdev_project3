@@ -16,7 +16,7 @@ function init(){
     //colorClearButton.addEventListener("onclick", removeColourLoversPalette());
     getDogPic();
     getDogFact();
-    google.maps.event.addDomListener(window, 'load', initMap);
+    google.maps.event.addEventListener(window, 'load', initMap);
   }
 }
 
